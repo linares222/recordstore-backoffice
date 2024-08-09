@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
-import Navbar from "./(components)/navbar";
-import Sidebar from "./(components)/sidebar";
+import Navbar from "./components/navbar";
+import Sidebar from "./components/sidebar";
 import StoreProvider, { useAppSelector } from "./redux";
 
 type PageWrapperProps = {

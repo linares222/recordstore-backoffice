@@ -1,0 +1,37 @@
+[
+  {
+    "id": "e90e8400-e29b-41d4-a716-446655440000",
+    "date": "2024-07-01T00:00:00Z",
+    "productType": "VINYL",
+    "totalValue": 120,
+    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440000"
+  },
+  {
+    "id": "e90e8400-e29b-41d4-a716-446655440001",
+    "date": "2024-07-02T00:00:00Z",
+    "productType": "CD",
+    "totalValue": 50,
+    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440001"
+  },
+  {
+    "id": "e90e8400-e29b-41d4-a716-446655440002",
+    "date": "2024-07-03T00:00:00Z",
+    "productType": "CASSETTE",
+    "totalValue": 30,
+    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440002"
+  },
+  {
+    "id": "e90e8400-e29b-41d4-a716-446655440003",
+    "date": "2024-07-04T00:00:00Z",
+    "productType": "EQUIPMENT",
+    "totalValue": 150,
+    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440003"
+  },
+  {
+    "id": "e90e8400-e29b-41d4-a716-446655440004",
+    "date": "2024-07-05T00:00:00Z",
+    "productType": "OTHER",
+    "totalValue": 25,
+    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440004"
+  }
+]

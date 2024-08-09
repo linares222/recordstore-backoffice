@@ -1,0 +1,133 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Status {
+  IN_PROCESS
+  SHIPPED
+  COMPLETE
+  CANCELED
+}
+
+enum ProductType {
+  VINYL
+  CD
+  CASSETTE
+  EQUIPMENT
+  OTHER
+}
+
+model User {
+  id            String              @id @default(uuid())
+  name          String
+  email         String              @unique
+  purchases     Purchase[]
+  statusUpdates OrderStatusUpdate[]
+}
+
+model Purchase {
+  id        String            @id @default(uuid())
+  timestamp DateTime
+  supplier  String
+  userId    String
+  user      User              @relation(fields: [userId], references: [id])
+  products  PurchaseProduct[]
+}
+
+model Product {
+  id          String            @id @default(uuid())
+  name        String
+  price       Float
+  stock       Int
+  productType ProductType
+  barcode     String?
+  purchases   PurchaseProduct[]
+  orders      OrderProduct[]
+}
+
+model PurchaseProduct {
+  id         String   @id @default(uuid())
+  quantity   Int
+  price      Float
+  purchaseId String
+  productId  String
+  purchase   Purchase @relation(fields: [purchaseId], references: [id])
+  product    Product  @relation(fields: [productId], references: [id])
+}
+
+model Order {
+  id            String              @id @default(uuid())
+  timestamp     DateTime
+  status        Status
+  products      OrderProduct[]
+  statusHistory OrderStatusUpdate[]
+}
+
+model OrderProduct {
+  id        String  @id @default(uuid())
+  quantity  Int
+  price     Float
+  discount  Float?
+  orderId   String
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  Order     Order?  @relation(fields: [orderId], references: [id])
+}
+
+model OrderStatusUpdate {
+  id        String   @id @default(uuid())
+  status    Status
+  changedAt DateTime
+  changedBy String
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id])
+  userId    User     @relation(fields: [changedBy], references: [id])
+}
+
+model PurchaseSummary {
+  id               String   @id @default(uuid())
+  totalValue       Float
+  changePercentage Float
+  date             DateTime
+}
+
+model OrderSummary {
+  id               String   @id @default(uuid())
+  totalValue       Float
+  changePercentage Float
+  date             DateTime
+}
+
+model Expense {
+  id          String      @id @default(uuid())
+  value       Float
+  productType ProductType
+  timestamp   DateTime
+}
+
+model ExpenseSummary {
+  id                   String                 @id @default(uuid())
+  totalValue           Float
+  date                 DateTime
+  expenseByProductType ExpenseByProductType[]
+}
+
+model ExpenseByProductType {
+  id String @id @default(uuid())
+  totalValue       Int
+  expenseSummaryId String
+  date DateTime
+  productType      ProductType
+  expenseSummary   ExpenseSummary @relation(fields: [expenseSummaryId], references: [id])
+}

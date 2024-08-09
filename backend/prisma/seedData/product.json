@@ -1,0 +1,42 @@
+[
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440000",
+    "name": "Astroworld",
+    "price": 39.99,
+    "stock": 100,
+    "productType": "VINYL",
+    "barcode": "1234567890123"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440001",
+    "name": "GOOD:AM",
+    "price": 14.99,
+    "stock": 200,
+    "productType": "CD",
+    "barcode": "1234567890124"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440002",
+    "name": "The Price Of Tea in China",
+    "price": 19.99,
+    "stock": 150,
+    "productType": "CASSETTE",
+    "barcode": "1234567890125"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440003",
+    "name": "AudioTechnica LP-120",
+    "price": 199.99,
+    "stock": 50,
+    "productType": "EQUIPMENT",
+    "barcode": "1234567890126"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440004",
+    "name": "7\" Sleeve",
+    "price": 0.99,
+    "stock": 75,
+    "productType": "OTHER",
+    "barcode": "1234567890127"
+  }
+]

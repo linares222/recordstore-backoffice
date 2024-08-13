@@ -38,5 +38,85 @@
     "stock": 75,
     "productType": "OTHER",
     "barcode": "1234567890127"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440005",
+    "name": "Igor",
+    "price": 34.99,
+    "stock": 120,
+    "productType": "VINYL",
+    "barcode": "1234567890128"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440006",
+    "name": "DAMN.",
+    "price": 29.99,
+    "stock": 80,
+    "productType": "VINYL",
+    "barcode": "1234567890129"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440007",
+    "name": "Swimming",
+    "price": 12.99,
+    "stock": 150,
+    "productType": "CD",
+    "barcode": "1234567890130"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440008",
+    "name": "At.Long.Last.A$AP",
+    "price": 17.99,
+    "stock": 100,
+    "productType": "CD",
+    "barcode": "1234567890131"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440009",
+    "name": "Luv Is Rage 2",
+    "price": 18.99,
+    "stock": 90,
+    "productType": "CASSETTE",
+    "barcode": "1234567890132"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440010",
+    "name": "Blonde",
+    "price": 21.99,
+    "stock": 60,
+    "productType": "CASSETTE",
+    "barcode": "1234567890133"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440011",
+    "name": "Pro-Ject Debut Carbon EVO",
+    "price": 299.99,
+    "stock": 30,
+    "productType": "EQUIPMENT",
+    "barcode": "1234567890134"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440012",
+    "name": "Shure M97xE Cartridge",
+    "price": 79.99,
+    "stock": 40,
+    "productType": "EQUIPMENT",
+    "barcode": "1234567890135"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440013",
+    "name": "LP Inner Sleeves",
+    "price": 1.49,
+    "stock": 100,
+    "productType": "OTHER",
+    "barcode": "1234567890136"
+  },
+  {
+    "id": "650e8400-e29b-41d4-a716-446655440014",
+    "name": "Record Cleaning Brush",
+    "price": 9.99,
+    "stock": 70,
+    "productType": "OTHER",
+    "barcode": "1234567890137"
   }
 ]

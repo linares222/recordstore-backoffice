@@ -15,7 +15,7 @@ const prismaInstance = new client_1.PrismaClient();
 const getDashboardData = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const popularProducts = yield prismaInstance.product.findMany({
-            take: 15,
+            take: 10,
             orderBy: {
                 stock: "desc",
             },

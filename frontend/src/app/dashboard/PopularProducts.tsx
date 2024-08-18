@@ -6,14 +6,14 @@ import React from "react";
 type Props = {};
 
 const PopularProducts = (props: Props) => {
-  const { data: dashboardData, error, isLoading } = useGetDashboardDataQuery();
+  const { data: dashboardData, isLoading } = useGetDashboardDataQuery();
   return (
     <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-2xl pb-14">
       {isLoading ? (
         <CircularProgress color="inherit" />
       ) : (
         <>
-          <h3 className="text-lg text-center font-bold py-3">
+          <h3 className="text-lg text-start font-bold py-3 pl-4">
             Popular Products
           </h3>
           <hr />
@@ -22,7 +22,7 @@ const PopularProducts = (props: Props) => {
               return (
                 <div    
                   key={product.id}
-                  className="flex justify-between px-3 py-5 border-b "
+                  className="flex justify-between items-center px-4 py-6 border-b "
                 >
                   <div className="flex items-center gap-3">
                     <div className="rounded-lg w-14 h-14 bg-slate-400"></div>

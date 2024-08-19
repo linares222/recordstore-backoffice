@@ -37,7 +37,7 @@ const OrderSummary = () => {
     })[0]?.date;
 
   return (
-    <div className="flex flex-col justify-between h-full row-span-2 xl:row-span-3 col-span-1 md:col-span-2 xl:col-span-1 bg-white shadow-md rounded-2xl">
+    <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-2xl flex flex-col justify-between">
       {isLoading ? (
         <div className="m-5">
           <CircularProgress color="inherit" />
@@ -84,7 +84,7 @@ const OrderSummary = () => {
             </div>
             {/* CHART */}
             <div className="flex-grow">
-              <ResponsiveContainer width="100%" height="100%" className="px-7">
+              <ResponsiveContainer width="100%" height={350} className="px-7">
                 <BarChart
                   data={OrderSummaryData}
                   margin={{ top: 0, right: 30, left: -30, bottom: 0 }}
@@ -132,7 +132,7 @@ const OrderSummary = () => {
             </div>
             <div>
               <hr />
-              <div className="flex justify-between items-center mt-6 text-sm px-7 mb-4">
+              <div className="flex justify-between items-center mt-6 text-sm px-7 pb-6">
                 <p className="font-semibold">{OrderSummaryData.length ?? 0} days</p>
                 <p className="text-sm">
                   Highest Orders Date:{" "}

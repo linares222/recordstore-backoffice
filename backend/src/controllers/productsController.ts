@@ -19,7 +19,7 @@ export const getProducts = async (
         id: "asc",
       },
     });
-    res.json({ products });
+    res.json(products);
   } catch (error) {
     res.status(500).json({ message: "Error returning products" });
   }

@@ -26,7 +26,7 @@ const getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
                 id: "asc",
             },
         });
-        res.json({ products });
+        res.json(products);
     }
     catch (error) {
         res.status(500).json({ message: "Error returning products" });

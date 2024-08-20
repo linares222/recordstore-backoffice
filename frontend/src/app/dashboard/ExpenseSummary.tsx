@@ -109,7 +109,7 @@ const ExpenseSummary = () => {
                   <p className="text-sm">
                     Average:{" "}
                     <span className="font-semibold">
-                      ${expenseByProductTypeSummaryData[0].totalValue.toFixed(2)}
+                      ${expenseByProductTypeSummaryData[0]?.totalValue.toFixed(2)}
                     </span>
                   </p>
                 </div>

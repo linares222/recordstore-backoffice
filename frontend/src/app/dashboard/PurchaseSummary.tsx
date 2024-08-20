@@ -30,7 +30,7 @@ const SaleSummary = (props: Props) => {
         <>
           <div>
             <h2 className="text-lg font-semibold mb-2 px-7 pt-5">
-              Order Summary
+              Purchase Summary
             </h2>
             <hr />
           </div>

@@ -4,6 +4,7 @@ import {
   useGetDashboardDataQuery,
 } from "@/state/api";
 import { CircularProgress } from "@mui/material";
+import { TrendingUp } from "lucide-react";
 import React from "react";
 import { Pie, PieChart, ResponsiveContainer, Cell } from "recharts";
 
@@ -11,14 +12,13 @@ type ExpenseSums = {
   [productType: string]: number;
 };
 
-const colors = ["#00C49F", "#0088FE", "#FFBB28"]; // Define colors for the chart
+const colors = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"];
 
 const ExpenseSummary = () => {
   const { data: dashboardData, isLoading } = useGetDashboardDataQuery();
   const expenseByProductTypeSummaryData =
     dashboardData?.expenseByProductType || [];
 
-  // Aggregate expenses by product type
   const expenseSums = expenseByProductTypeSummaryData.reduce(
     (acc: ExpenseSums, cur: ExpenseByProductType) => {
       const productType: ProductType = cur.productType;
@@ -30,7 +30,6 @@ const ExpenseSummary = () => {
     {} as ExpenseSums
   );
 
-  // Convert aggregated data to an array for the chart
   const expenseProductTypes = Object.entries(expenseSums).map(
     ([name, value]) => ({
       name,
@@ -38,7 +37,6 @@ const ExpenseSummary = () => {
     })
   );
 
-  // Calculate total expenses
   const totalExpenses = expenseProductTypes.reduce(
     (acc, { value }) => acc + value,
     0
@@ -59,9 +57,9 @@ const ExpenseSummary = () => {
             </h2>
             <hr />
           </div>
-          <div className="xl:flex flex justify-center pr-7 gap-4">
-            <div className="relative basis-3/5 h-64 ">
-              <ResponsiveContainer width="100%" height="100%">
+          <div className="xl:flex justify-between pr-7 py-4">
+            <div className="relative basis-3/5 ">
+              <ResponsiveContainer width="100%" height={150}>
                 <PieChart>
                   <Pie
                     data={expenseProductTypes}
@@ -88,10 +86,10 @@ const ExpenseSummary = () => {
                 </span>
               </div>
             </div>
-            <ul className="flex flex-col justify-around xl:items-start py-5 gap-3">
+            <ul className="flex flex-col items-center justify-around xl:items-start py-5 gap-3">
               {expenseProductTypes.map((entry, index) => (
                 <li
-                  key={`legend-${index}`}
+                  key={`label-${index}`}
                   className="flex items-center text-xs "
                 >
                   <span
@@ -102,6 +100,25 @@ const ExpenseSummary = () => {
                 </li>
               ))}
             </ul>
+          </div>
+          <div>
+            <hr />
+            {expenseByProductTypeSummaryData && (
+              <div className="mt-3 flex justify-between items-center px-7 mb-4">
+                <div className="pt-2">
+                  <p className="text-sm">
+                    Average:{" "}
+                    <span className="font-semibold">
+                      ${expenseByProductTypeSummaryData[0].totalValue.toFixed(2)}
+                    </span>
+                  </p>
+                </div>
+                <span className="flex items-center mt-2">
+                  <TrendingUp className="mr-2 text-green-500" />
+                  30%
+                </span>
+              </div>
+            )}
           </div>
         </>
       )}

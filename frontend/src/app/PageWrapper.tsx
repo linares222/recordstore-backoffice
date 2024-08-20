@@ -27,8 +27,8 @@ const PageWrapperLayout = ({ children }: PageWrapperProps) => {
     >
       <Sidebar />
       <main
-        className={`flex flex-col w-full h-full bg-gray-50 px-9 py-7 ${
-          isSidebarOpen ? "md:pl-72" : "md:pl-24"
+        className={`flex flex-col w-full h-full bg-gray-50 px-9 py-7 
+          pl-28
         }`}
       >
         <Navbar />

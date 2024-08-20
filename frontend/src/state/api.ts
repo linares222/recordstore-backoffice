@@ -1,11 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+
+export type ProductType = "VINYL" | "CD" | "CASSETTE" | "EQUIPMENT" | "OTHER";
 export interface DashboardData {
   popularProducts: Product[];
   orderSummary: OrderOrPurchaseSummary[];
   purchaseSummary: OrderOrPurchaseSummary[];
   expenseSummary: ExpenseSummary[];
-  expenseByProductTypeSummary: ExpenseByProductType[];
+  expenseByProductType: ExpenseByProductType[];
 }
 
 export interface Product {
@@ -13,7 +15,7 @@ export interface Product {
   name: string;
   price: number;
   stock: number;
-  productType: "VINYL" | "CD" | "CASSETTE" | "EQUIPMENT" | "OTHER";
+  productType: ProductType;
   barcode?: string;
 }
 
@@ -42,7 +44,7 @@ export interface ExpenseByProductType {
   totalValue: number;
   expenseSummaryId: string;
   date: Date;
-  productType: "VINYL" | "CD" | "CASSETTE" | "EQUIPMENT" | "OTHER";
+  productType: ProductType;
 }
 
 export const api = createApi({

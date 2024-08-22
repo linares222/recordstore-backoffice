@@ -14,7 +14,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const client_1 = require("@prisma/client");
 const fs_1 = __importDefault(require("fs"));
+const dotenv_1 = __importDefault(require("dotenv"));
 const path_1 = __importDefault(require("path"));
+dotenv_1.default.config();
 const prisma = new client_1.PrismaClient();
 //deletes data from models if there is any model with the names
 function deleteAllData(orderedFileNames) {
@@ -47,6 +49,7 @@ function main() {
             "purchaseSummary.json",
             "orderSummary.json",
             "expenseByProductType.json",
+            "expenseSummary.json",
             "expense.json",
             "user.json",
             "product.json",

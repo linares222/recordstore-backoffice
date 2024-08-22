@@ -1,6 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import fs from "fs";
+import dotenv from 'dotenv';
 import path from "path";
+dotenv.config();
 const prisma = new PrismaClient();
 
 
@@ -37,6 +39,7 @@ async function main() {
     "purchaseSummary.json",
     "orderSummary.json",
     "expenseByProductType.json",
+    "expenseSummary.json",
     "expense.json",
     "user.json",
     "product.json",

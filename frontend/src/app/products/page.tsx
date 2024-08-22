@@ -5,6 +5,7 @@ import { CircularProgress } from "@mui/material";
 import { Barcode } from "lucide-react";
 import React, { useCallback, useEffect, useState } from "react";
 import useDebounce from "../hooks/useDebounce";
+import AddProductButton from "./AddProductButton";
 
 function Products() {
   const { data, isError, isLoading } = useGetProductsQuery();
@@ -45,9 +46,8 @@ function Products() {
     <div className="p-4">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold ">Products</h2>
-        <button className="w-1/4 bg-blue-400 hover:bg-blue-300 h-12 rounded-md shadow-md flex justify-center items-center text-lg text-white font-semibold">
-          Add product
-        </button>
+
+        <AddProductButton />
       </div>
       <div className="h-full flex justify-between items-center gap-4">
         <input
@@ -60,7 +60,9 @@ function Products() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:overflow-auto gap-4">
         {products.length === 0 ? (
-          <div className="text-xl font-semibold p-2">No products matched the search</div>
+          <div className="text-xl font-semibold p-2">
+            No products matched the search
+          </div>
         ) : (
           products.map((p) => (
             <div
@@ -68,8 +70,10 @@ function Products() {
               className="flex flex-col bg-white items-center justify-between border rounded-xl shadow-md aspect-square py-5 px-5"
             >
               <div className="h-2/5 w-2/5 bg-red-300 mt-4"></div>
-              <div className="flex flex-col justify-center items-center gap-1">
-                <p className="text-base font-semibold">{p.name}</p>
+              <div className="flex flex-col justify-center items-center gap-1 w-full">
+                <p className="text-base font-semibold text-center w-full max-w-[90%] overflow-hidden text-ellipsis">
+                  {p.name}
+                </p>
                 <p className="font-semibold">{p.price}€</p>
                 <p className="font-bold text-slate-500">{p.productType}</p>
                 <p className="font-semibold">

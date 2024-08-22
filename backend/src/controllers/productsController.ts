@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library";
 import { Request, Response } from "express";
 
 const prismaInstance = new PrismaClient();
@@ -30,10 +31,10 @@ export const addProduct = async (
   res: Response
 ): Promise<void> => {
   try {
-    const { id, name, price, stock, productType, barcode } = req.body;
-    const product = prismaInstance.product.create({
+    console.log(req.body);
+    const { name, price, stock, productType, barcode } = req.body;
+    const product = await prismaInstance.product.create({
       data: {
-        id,
         name,
         price,
         stock,
@@ -43,6 +44,13 @@ export const addProduct = async (
     });
     res.status(201).json(product);
   } catch (error) {
-    res.status(500).json({ message: "Error creating product" });
+    console.error("Error creating product:", error);
+    if (error instanceof PrismaClientKnownRequestError) {
+      {
+        res.status(500).json({ message: "Error creating product" });
+      }
+    } else {
+      res.status(500).json({ message: "Unexpected error occurred" });
+    }
   }
 };

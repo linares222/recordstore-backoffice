@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between w-full items-center space-x-2 pl-20 md:pr-4 md:pl-0">
+    <div className="flex justify-between w-full items-center space-x-2 pl-20 md:pr-4 md:pl-0 mb-4">
       <div className="flex items-center w-full space-x-4 ">
         <form
           action=""

@@ -14,7 +14,7 @@ import {
 
 type Props = {};
 
-const SaleSummary = (props: Props) => {
+const PurchaseSummary = (props: Props) => {
   const { data: dashboardData, isLoading } = useGetDashboardDataQuery();
   const PurchaseSummaryData = dashboardData?.purchaseSummary || [];
   const lastDataPoint =
@@ -102,4 +102,4 @@ const SaleSummary = (props: Props) => {
   );
 };
 
-export default SaleSummary;
+export default PurchaseSummary;

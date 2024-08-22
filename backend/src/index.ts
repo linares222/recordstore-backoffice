@@ -5,6 +5,7 @@ import cors from "cors";
 import morgan from "morgan";
 import helmet from "helmet";
 import dashboardRoutes from "./routes/dashboardRoutes";
+import productsRoutes from "./routes/productsRoutes";
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,7 @@ app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 app.use("/dashboard", dashboardRoutes);
+app.use("/products", productsRoutes);
 
 const port = process.env.PORT ?? 4000;
 app.listen(port, () => {

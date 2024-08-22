@@ -62,10 +62,16 @@ export interface ExpenseByProductType {
   productType: "VINYL" | "CD" | "CASSETTE" | "EQUIPMENT" | "OTHER";
 }
 
+export interface UsersData {
+  id: string;
+  name: string;
+  email: string;
+}
+
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
   reducerPath: "api",
-  tagTypes: ["DashboardData", "Products"],
+  tagTypes: ["DashboardData", "Products", "UsersData"],
   endpoints: (build) => ({
     getDashboardData: build.query<DashboardData, void>({
       query: () => ({ url: "/dashboard" }),
@@ -87,6 +93,12 @@ export const api = createApi({
       }),
       invalidatesTags: ["Products"],
     }),
+    getUsers: build.query<UsersData, void>({
+      query: () => ({
+        url: "/users",
+      }),
+      providesTags: ["UsersData"],
+    }),
   }),
 });
 
@@ -94,5 +106,5 @@ export const {
   useGetDashboardDataQuery,
   useGetProductsQuery,
   useAddProductMutation,
+  useGetUsersQuery
 } = api;
-

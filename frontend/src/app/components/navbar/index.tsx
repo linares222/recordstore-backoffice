@@ -4,6 +4,7 @@ import { setIsDarkMode } from "@/state";
 import { Avatar } from "@mui/material";
 import { Bell, Moon, SearchIcon, Settings, Sun } from "lucide-react";
 import React from "react";
+import SettingsBtn from "../settingsBtn";
 
 const Navbar = () => {
   const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
@@ -43,7 +44,7 @@ const Navbar = () => {
           <Avatar alt="User profile picture" src="" />
         </button>
         <button className="hidden sm:block">
-          <Settings size={28} />
+          <SettingsBtn/>
         </button>
       </div>
     </div>

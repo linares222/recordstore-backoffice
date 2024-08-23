@@ -12,11 +12,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Settings, Bell, Moon, Globe, LogOut } from "lucide-react";
+import { useAppDispatch, useAppSelector } from "@/app/redux";
+import { setIsDarkMode } from "@/state";
 
 const SettingsBtn = () => {
-  const [notifications, setNotifications] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [notifications, setNotifications] = useState(true);
   const [language, setLanguage] = useState("EN");
+  const darkMode = useAppSelector((state) => state.global.isDarkMode);
+  const dispatch = useAppDispatch();
+
+  const toggleDarkMode = () => {
+    dispatch(setIsDarkMode(!darkMode));
+  };
 
   const handleToggleClick = (event: React.MouseEvent) => {
     event.stopPropagation();
@@ -55,7 +62,7 @@ const SettingsBtn = () => {
           <Switch
             checked={darkMode}
             onClick={handleToggleClick}
-            onCheckedChange={setDarkMode}
+            onCheckedChange={toggleDarkMode}
           />
         </DropdownMenuItem>
         <DropdownMenuItem className="flex items-center justify-between">

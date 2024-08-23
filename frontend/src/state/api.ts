@@ -93,7 +93,7 @@ export const api = createApi({
       }),
       invalidatesTags: ["Products"],
     }),
-    getUsers: build.query<UsersData, void>({
+    getUsers: build.query<UsersData[], void>({
       query: () => ({
         url: "/users",
       }),

@@ -25,6 +25,7 @@ app.use(helmet_1.default.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use("/dashboard", dashboardRoutes_1.default);
 app.use("/products", productsRoutes_1.default);
 app.use("/users", usersRoutes_1.default);
+app.use("/expenses", usersRoutes_1.default);
 const port = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : 4000;
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);

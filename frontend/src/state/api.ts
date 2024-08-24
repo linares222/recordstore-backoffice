@@ -71,7 +71,7 @@ export interface UsersData {
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
   reducerPath: "api",
-  tagTypes: ["DashboardData", "Products", "UsersData"],
+  tagTypes: ["DashboardData", "Products", "UsersData", "ExpensesData"],
   endpoints: (build) => ({
     getDashboardData: build.query<DashboardData, void>({
       query: () => ({ url: "/dashboard" }),
@@ -99,6 +99,12 @@ export const api = createApi({
       }),
       providesTags: ["UsersData"],
     }),
+    getExpenses: build.query<ExpenseByProductType[], void>({
+      query: () => ({
+        url: "/expenses",
+      }),
+      providesTags: ["ExpensesData"],
+    }),
   }),
 });
 
@@ -106,5 +112,6 @@ export const {
   useGetDashboardDataQuery,
   useGetProductsQuery,
   useAddProductMutation,
-  useGetUsersQuery
+  useGetUsersQuery,
+  useGetExpensesQuery,
 } = api;

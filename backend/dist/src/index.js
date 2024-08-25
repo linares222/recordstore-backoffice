@@ -2,7 +2,6 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 const body_parser_1 = __importDefault(require("body-parser"));
 const dotenv_1 = __importDefault(require("dotenv"));
@@ -27,7 +26,7 @@ app.use("/dashboard", dashboardRoutes_1.default);
 app.use("/products", productsRoutes_1.default);
 app.use("/users", usersRoutes_1.default);
 app.use("/expenses", expensesRoutes_1.default);
-const port = (_a = process.env.PORT) !== null && _a !== void 0 ? _a : 4000;
-app.listen(port, () => {
+const port = Number(process.env.PORT) || 4000;
+app.listen(port, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${port}`);
 });

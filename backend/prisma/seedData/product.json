@@ -1,122 +1,202 @@
 [
   {
-    "id": "650e8400-e29b-41d4-a716-446655440000",
-    "name": "Astroworld",
-    "price": 39.99,
-    "stock": 100,
-    "productType": "VINYL",
-    "barcode": "1234567890123"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440001",
-    "name": "GOOD:AM",
-    "price": 14.99,
-    "stock": 200,
-    "productType": "CD",
-    "barcode": "1234567890124"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440002",
-    "name": "The Price Of Tea in China",
-    "price": 19.99,
-    "stock": 150,
-    "productType": "CASSETTE",
-    "barcode": "1234567890125"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440003",
-    "name": "AudioTechnica LP-120",
-    "price": 199.99,
-    "stock": 50,
-    "productType": "EQUIPMENT",
-    "barcode": "1234567890126"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440004",
-    "name": "7\" Sleeve",
-    "price": 0.99,
-    "stock": 75,
-    "productType": "OTHER",
-    "barcode": "1234567890127"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440005",
-    "name": "Igor",
-    "price": 34.99,
-    "stock": 120,
-    "productType": "VINYL",
-    "barcode": "1234567890128"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440006",
-    "name": "DAMN.",
+    "id": "ckx200000001",
+    "name": "Dark Side of the Moon",
     "price": 29.99,
-    "stock": 80,
-    "productType": "VINYL",
-    "barcode": "1234567890129"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440007",
-    "name": "Swimming",
-    "price": 12.99,
-    "stock": 150,
-    "productType": "CD",
-    "barcode": "1234567890130"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440008",
-    "name": "At.Long.Last.A$AP",
-    "price": 17.99,
     "stock": 100,
+    "productType": "VINYL",
+    "barcode": "123456789012"
+  },
+  {
+    "id": "ckx200000002",
+    "name": "Abbey Road",
+    "price": 15.99,
+    "stock": 50,
     "productType": "CD",
-    "barcode": "1234567890131"
+    "barcode": "123456789013"
   },
   {
-    "id": "650e8400-e29b-41d4-a716-446655440009",
-    "name": "Luv Is Rage 2",
-    "price": 18.99,
-    "stock": 90,
+    "id": "ckx200000003",
+    "name": "Thriller",
+    "price": 9.99,
+    "stock": 200,
     "productType": "CASSETTE",
-    "barcode": "1234567890132"
+    "barcode": "123456789014"
   },
   {
-    "id": "650e8400-e29b-41d4-a716-446655440010",
-    "name": "Blonde",
-    "price": 21.99,
-    "stock": 60,
-    "productType": "CASSETTE",
-    "barcode": "1234567890133"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440011",
-    "name": "Pro-Ject Debut Carbon EVO",
-    "price": 299.99,
+    "id": "ckx200000004",
+    "name": "Audio-Technica AT-LP120X",
+    "price": 249.99,
     "stock": 30,
     "productType": "EQUIPMENT",
-    "barcode": "1234567890134"
+    "barcode": "123456789015"
   },
   {
-    "id": "650e8400-e29b-41d4-a716-446655440012",
-    "name": "Shure M97xE Cartridge",
+    "id": "ckx200000005",
+    "name": "Sony WH-1000XM4",
     "price": 79.99,
+    "stock": 120,
+    "productType": "EQUIPMENT",
+    "barcode": "123456789016"
+  },
+  {
+    "id": "ckx200000006",
+    "name": "Led Zeppelin IV",
+    "price": 25.99,
+    "stock": 80,
+    "productType": "VINYL",
+    "barcode": "123456789017"
+  },
+  {
+    "id": "ckx200000007",
+    "name": "Back in Black",
+    "price": 13.99,
+    "stock": 60,
+    "productType": "CD",
+    "barcode": "123456789018"
+  },
+  {
+    "id": "ckx200000008",
+    "name": "Nevermind",
+    "price": 8.99,
+    "stock": 220,
+    "productType": "CASSETTE",
+    "barcode": "123456789019"
+  },
+  {
+    "id": "ckx200000009",
+    "name": "Rumours",
+    "price": 27.99,
+    "stock": 90,
+    "productType": "VINYL",
+    "barcode": "123456789020"
+  },
+  {
+    "id": "ckx200000010",
+    "name": "Hotel California",
+    "price": 17.99,
+    "stock": 55,
+    "productType": "CD",
+    "barcode": "123456789021"
+  },
+  {
+    "id": "ckx200000011",
+    "name": "The Wall",
+    "price": 7.99,
+    "stock": 210,
+    "productType": "CASSETTE",
+    "barcode": "123456789022"
+  },
+  {
+    "id": "ckx200000012",
+    "name": "Abbey Road",
+    "price": 31.99,
+    "stock": 75,
+    "productType": "VINYL",
+    "barcode": "123456789023"
+  },
+  {
+    "id": "ckx200000013",
+    "name": "A Night at the Opera",
+    "price": 16.99,
+    "stock": 48,
+    "productType": "CD",
+    "barcode": "123456789024"
+  },
+  {
+    "id": "ckx200000014",
+    "name": "Technics SL-1200MK7",
+    "price": 219.99,
+    "stock": 35,
+    "productType": "EQUIPMENT",
+    "barcode": "123456789025"
+  },
+  {
+    "id": "ckx200000015",
+    "name": "Bose QuietComfort 35 II",
+    "price": 69.99,
+    "stock": 100,
+    "productType": "EQUIPMENT",
+    "barcode": "123456789026"
+  },
+  {
+    "id": "ckx200000016",
+    "name": "The Joshua Tree",
+    "price": 34.99,
+    "stock": 95,
+    "productType": "VINYL",
+    "barcode": "123456789027"
+  },
+  {
+    "id": "ckx200000017",
+    "name": "Born to Run",
+    "price": 18.99,
+    "stock": 65,
+    "productType": "CD",
+    "barcode": "123456789028"
+  },
+  {
+    "id": "ckx200000018",
+    "name": "Purple Rain",
+    "price": 11.99,
+    "stock": 180,
+    "productType": "CASSETTE",
+    "barcode": "123456789029"
+  },
+  {
+    "id": "ckx200000019",
+    "name": "Hunky Dory",
+    "price": 29.99,
+    "stock": 110,
+    "productType": "VINYL",
+    "barcode": "123456789030"
+  },
+  {
+    "id": "ckx200000020",
+    "name": "Master of Puppets",
+    "price": 14.99,
+    "stock": 70,
+    "productType": "CD",
+    "barcode": "123456789031"
+  },
+  {
+    "id": "ckx200000021",
+    "name": "Highway to Hell",
+    "price": 10.99,
+    "stock": 190,
+    "productType": "CASSETTE",
+    "barcode": "123456789032"
+  },
+  {
+    "id": "ckx200000022",
+    "name": "Bridge Over Troubled Water",
+    "price": 28.99,
+    "stock": 85,
+    "productType": "VINYL",
+    "barcode": "123456789033"
+  },
+  {
+    "id": "ckx200000023",
+    "name": "Led Zeppelin II",
+    "price": 19.99,
+    "stock": 60,
+    "productType": "CD",
+    "barcode": "123456789034"
+  },
+  {
+    "id": "ckx200000024",
+    "name": "Pioneer PL-30-K",
+    "price": 199.99,
     "stock": 40,
     "productType": "EQUIPMENT",
-    "barcode": "1234567890135"
+    "barcode": "123456789035"
   },
   {
-    "id": "650e8400-e29b-41d4-a716-446655440013",
-    "name": "LP Inner Sleeves",
-    "price": 1.49,
-    "stock": 100,
-    "productType": "OTHER",
-    "barcode": "1234567890136"
-  },
-  {
-    "id": "650e8400-e29b-41d4-a716-446655440014",
-    "name": "Record Cleaning Brush",
-    "price": 9.99,
-    "stock": 70,
-    "productType": "OTHER",
-    "barcode": "1234567890137"
+    "id": "ckx200000025",
+    "name": "Sennheiser HD 650",
+    "price": 59.99,
+    "stock": 110,
+    "productType": "EQUIPMENT",
+    "barcode": "123456789036"
   }
 ]

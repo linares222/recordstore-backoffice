@@ -1,37 +1,177 @@
 [
   {
-    "id": "e90e8400-e29b-41d4-a716-446655440000",
-    "date": "2024-07-01T00:00:00Z",
-    "productType": "VINYL",
-    "totalValue": 120,
-    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440000"
+    "id": "ckx110000001",
+    "totalValue": 1200.5,
+    "expenseSummaryId": "ckx100000001",
+    "date": "2023-08-24T00:00:00Z",
+    "productType": "VINYL"
   },
   {
-    "id": "e90e8400-e29b-41d4-a716-446655440001",
-    "date": "2024-07-02T00:00:00Z",
-    "productType": "CD",
-    "totalValue": 50,
-    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440001"
+    "id": "ckx110000002",
+    "totalValue": 1500.75,
+    "expenseSummaryId": "ckx100000001",
+    "date": "2023-08-24T00:00:00Z",
+    "productType": "CD"
   },
   {
-    "id": "e90e8400-e29b-41d4-a716-446655440002",
-    "date": "2024-07-03T00:00:00Z",
-    "productType": "CASSETTE",
-    "totalValue": 30,
-    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440002"
+    "id": "ckx110000003",
+    "totalValue": 900.3,
+    "expenseSummaryId": "ckx100000001",
+    "date": "2023-08-24T00:00:00Z",
+    "productType": "CASSETTE"
   },
   {
-    "id": "e90e8400-e29b-41d4-a716-446655440003",
-    "date": "2024-07-04T00:00:00Z",
-    "productType": "EQUIPMENT",
-    "totalValue": 150,
-    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440003"
+    "id": "ckx110000004",
+    "totalValue": 1700.8,
+    "expenseSummaryId": "ckx100000001",
+    "date": "2023-08-24T00:00:00Z",
+    "productType": "EQUIPMENT"
   },
   {
-    "id": "e90e8400-e29b-41d4-a716-446655440004",
-    "date": "2024-07-05T00:00:00Z",
-    "productType": "OTHER",
-    "totalValue": 25,
-    "expenseSummaryId": "d80e8400-e29b-41d4-a716-446655440004"
+    "id": "ckx110000005",
+    "totalValue": 800.9,
+    "expenseSummaryId": "ckx100000001",
+    "date": "2023-08-24T00:00:00Z",
+    "productType": "OTHER"
+  },
+  {
+    "id": "ckx110000006",
+    "totalValue": 1100.25,
+    "expenseSummaryId": "ckx100000002",
+    "date": "2023-08-25T00:00:00Z",
+    "productType": "VINYL"
+  },
+  {
+    "id": "ckx110000007",
+    "totalValue": 1400.4,
+    "expenseSummaryId": "ckx100000002",
+    "date": "2023-08-25T00:00:00Z",
+    "productType": "CD"
+  },
+  {
+    "id": "ckx110000008",
+    "totalValue": 1000.6,
+    "expenseSummaryId": "ckx100000002",
+    "date": "2023-08-25T00:00:00Z",
+    "productType": "CASSETTE"
+  },
+  {
+    "id": "ckx110000009",
+    "totalValue": 1600.75,
+    "expenseSummaryId": "ckx100000002",
+    "date": "2023-08-25T00:00:00Z",
+    "productType": "EQUIPMENT"
+  },
+  {
+    "id": "ckx110000010",
+    "totalValue": 900.15,
+    "expenseSummaryId": "ckx100000002",
+    "date": "2023-08-25T00:00:00Z",
+    "productType": "OTHER"
+  },
+  {
+    "id": "ckx110000011",
+    "totalValue": 1300.45,
+    "expenseSummaryId": "ckx100000003",
+    "date": "2023-08-26T00:00:00Z",
+    "productType": "VINYL"
+  },
+  {
+    "id": "ckx110000012",
+    "totalValue": 1600.85,
+    "expenseSummaryId": "ckx100000003",
+    "date": "2023-08-26T00:00:00Z",
+    "productType": "CD"
+  },
+  {
+    "id": "ckx110000013",
+    "totalValue": 950.35,
+    "expenseSummaryId": "ckx100000003",
+    "date": "2023-08-26T00:00:00Z",
+    "productType": "CASSETTE"
+  },
+  {
+    "id": "ckx110000014",
+    "totalValue": 1800.6,
+    "expenseSummaryId": "ckx100000003",
+    "date": "2023-08-26T00:00:00Z",
+    "productType": "EQUIPMENT"
+  },
+  {
+    "id": "ckx110000015",
+    "totalValue": 850.9,
+    "expenseSummaryId": "ckx100000003",
+    "date": "2023-08-26T00:00:00Z",
+    "productType": "OTHER"
+  },
+  {
+    "id": "ckx110000016",
+    "totalValue": 1100.75,
+    "expenseSummaryId": "ckx100000004",
+    "date": "2023-08-27T00:00:00Z",
+    "productType": "VINYL"
+  },
+  {
+    "id": "ckx110000017",
+    "totalValue": 1400.4,
+    "expenseSummaryId": "ckx100000004",
+    "date": "2023-08-27T00:00:00Z",
+    "productType": "CD"
+  },
+  {
+    "id": "ckx110000018",
+    "totalValue": 950.35,
+    "expenseSummaryId": "ckx100000004",
+    "date": "2023-08-27T00:00:00Z",
+    "productType": "CASSETTE"
+  },
+  {
+    "id": "ckx110000019",
+    "totalValue": 1700.55,
+    "expenseSummaryId": "ckx100000004",
+    "date": "2023-08-27T00:00:00Z",
+    "productType": "EQUIPMENT"
+  },
+  {
+    "id": "ckx110000020",
+    "totalValue": 800.65,
+    "expenseSummaryId": "ckx100000004",
+    "date": "2023-08-27T00:00:00Z",
+    "productType": "OTHER"
+  },
+  {
+    "id": "ckx110000021",
+    "totalValue": 1200.85,
+    "expenseSummaryId": "ckx100000005",
+    "date": "2023-08-28T00:00:00Z",
+    "productType": "VINYL"
+  },
+  {
+    "id": "ckx110000022",
+    "totalValue": 1500.6,
+    "expenseSummaryId": "ckx100000005",
+    "date": "2023-08-28T00:00:00Z",
+    "productType": "CD"
+  },
+  {
+    "id": "ckx110000023",
+    "totalValue": 1000.2,
+    "expenseSummaryId": "ckx100000005",
+    "date": "2023-08-28T00:00:00Z",
+    "productType": "CASSETTE"
+  },
+  {
+    "id": "ckx110000024",
+    "totalValue": 1600.4,
+    "expenseSummaryId": "ckx100000005",
+    "date": "2023-08-28T00:00:00Z",
+    "productType": "EQUIPMENT"
+  },
+  {
+    "id": "ckx110000025",
+    "totalValue": 900.1,
+    "expenseSummaryId": "ckx100000005",
+    "date": "2023-08-28T00:00:00Z",
+    "productType": "OTHER"
   }
 ]

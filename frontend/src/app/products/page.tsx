@@ -1,6 +1,6 @@
 "use client";
 
-import { Product, useGetProductsQuery } from "@/state/api";
+import { Product, ProductType, useGetProductsQuery } from "@/state/api";
 import { CircularProgress } from "@mui/material";
 import { Barcode } from "lucide-react";
 import React, { useCallback, useEffect, useState } from "react";
@@ -23,6 +23,21 @@ function Products() {
     },
     [data]
   );
+
+  const getSource = (type: ProductType) => {
+    switch (type) {
+      case "VINYL":
+        return "https://recordstore-backoffice.s3.eu-west-3.amazonaws.com/vinyl_placeholder.jpeg";
+      case "CD":
+        return "https://recordstore-backoffice.s3.eu-west-3.amazonaws.com/CD_placeholder.jpeg";
+      case "CASSETTE":
+        return "https://recordstore-backoffice.s3.eu-west-3.amazonaws.com/cassette_placeholder.jpeg";
+      case "EQUIPMENT":
+        return "https://recordstore-backoffice.s3.eu-west-3.amazonaws.com/equipment_placeholder.jpeg";
+      case "OTHER":
+        return "https://recordstore-backoffice.s3.eu-west-3.amazonaws.com/music_placeholder.jpeg";
+    }
+  };
 
   useEffect(() => {
     if (data) {
@@ -69,7 +84,11 @@ function Products() {
               key={p.id}
               className="flex flex-col bg-white items-center justify-between border rounded-xl shadow-md aspect-square py-5 px-5"
             >
-              <div className="h-2/5 w-2/5 bg-red-300 mt-4"></div>
+              <img
+                src={getSource(p.productType)}
+                className="h-2/5 w-2/5 bg-red-300 mt-4"
+                alt="product image"
+              />
               <div className="flex flex-col justify-center items-center gap-1 w-full">
                 <p className="text-base font-semibold text-center w-full max-w-[90%] overflow-hidden text-ellipsis">
                   {p.name}

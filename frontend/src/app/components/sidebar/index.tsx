@@ -70,8 +70,8 @@ const Sidebar = () => {
       } h-full shadow-md z-50 overflow-hidden transition-all duration-300`}
     >
       {/* logo */}
-      <div className="flex justify-center items-center pt-8 gap-3">
-        <div>logo</div>
+      <div className="flex justify-center items-center pt-8 gap-1">
+        <img src="https://recordstore-backoffice.s3.eu-west-3.amazonaws.com/logo.png" className={`h-14 w-14 ${isSidebarOpen && "h-20 w-20"}`}/>
         {isSidebarOpen && <p className="text-xl font-bold ">CRATEKEEPR</p>}
       </div>
       <div className="flex-grow mt-8">

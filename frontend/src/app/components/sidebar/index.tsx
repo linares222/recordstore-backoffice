@@ -11,7 +11,6 @@ import {
   ReceiptEuro,
   User,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -113,7 +112,7 @@ const Sidebar = () => {
         />
       </div>
       {/* footer */}
-      <div className="text-xs text-gray-500 text-center">
+      <div className="text-xs text-gray-500 text-center pb-5">
         &copy; 2024 CRATEKEEPR
       </div>
     </div>

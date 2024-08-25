@@ -22,9 +22,9 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use("/dashboard", dashboardRoutes);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
-app.use("/expenses", expensesRoutes)
+app.use("/expenses", expensesRoutes);
 
-const port = Number(process.env.PORT) ?? 4000;
-app.listen(port,"0.0.0.0" ,() => {
+const port = Number(process.env.PORT) || 4000;
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server running on http://localhost:${port}`);
 });

@@ -17,12 +17,12 @@ export const getExpensesData = async (
 
     const expenseByProductType = expenseByProductTypeSummary.map((item) => ({
       ...item,
-      amount: item.totalValue.toString(),
+      totalValue: item.totalValue.toString(),
     }));
 
-    res.json({
+    res.json(
       expenseByProductType,
-    });
+    );
   } catch (error) {
     res.status(500).json({ message: "Error returning dashboard data" });
   }

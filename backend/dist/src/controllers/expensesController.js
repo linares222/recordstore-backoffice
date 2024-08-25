@@ -19,10 +19,8 @@ const getExpensesData = (req, res) => __awaiter(void 0, void 0, void 0, function
                 date: "desc",
             },
         });
-        const expenseByProductType = expenseByProductTypeSummary.map((item) => (Object.assign(Object.assign({}, item), { amount: item.totalValue.toString() })));
-        res.json({
-            expenseByProductType,
-        });
+        const expenseByProductType = expenseByProductTypeSummary.map((item) => (Object.assign(Object.assign({}, item), { totalValue: item.totalValue.toString() })));
+        res.json(expenseByProductType);
     }
     catch (error) {
         res.status(500).json({ message: "Error returning dashboard data" });
